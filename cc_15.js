@@ -49,8 +49,8 @@ function addRiskItem(riskName, riskLevel, department) //function that creates ne
     const resolveButton = document.createElement("button");
     resolveButton.textContent = "Resolve";
     resolveButton.classList.add("resolve-button");
-    resolveButton.addEventListener("click", function(){ticketContainer.removeChild(riskCard);});
-
+    resolveButton.addEventListener("click", function (event) {event.stopPropagation(); }); // task 6
+   
     //appending all these elements to the interactive dashboard
     riskCard.appendChild(name);
     riskCard.appendChild(level);
