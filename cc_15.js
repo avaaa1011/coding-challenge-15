@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () =>
         addRiskItem(riskName, riskLevel, department); 
         this.reset(); 
     });
+//task 5: implementing bulk updates
+document.getElementById("allIncrease").addEventListener("click", allIncrease);
 });
 
 //task 2: adding risk items dynamically
@@ -20,6 +22,7 @@ function addRiskItem(riskName, riskLevel, department) //function that creates ne
     const riskDashboard = document.getElementById("riskDashboard"); 
     const riskCard = document.createElement("div"); //adding new card with div
     riskCard.classList.add("riskCard"); 
+    riskCard.setAttribute("storedLevel",riskLevel); //task 5
 
     //task 4: categorizing risks by their level through different colors
     if (riskLevel === "Low") {
@@ -36,6 +39,7 @@ function addRiskItem(riskName, riskLevel, department) //function that creates ne
         name.textContent = `Risk Name: ${riskName}`;
     const level = document.createElement("p"); 
         level.textContent = `Risk Level: ${riskLevel}`;
+        level.classList.add("riskLevel"); //task 5 
 
     const department = document.createElement("p"); 
         department.textContent = `Department: ${department}`;
@@ -67,4 +71,4 @@ addRiskItem("Supply Chain Disruption", "Medium", "Operations");
 addRiskItem("Market Fluctuations", "High", "Finance"); // Clicking "Resolve" should remove this risk from the dashboard.
 addRiskItem("Cybersecurity Threat", "High", "IT");
 addRiskItem("HR Compliance Issue", "Low", "Human Resources");
-   
+addRiskItem("Employee Retention", "Low", "HR");// Clicking "Increase Risk Levels" should change it to "Medium".

@@ -3,7 +3,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Coding Challenge</title>
     <title>Risk Management Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
 <style>
     body{
     font-family: 'Courier New', Courier, monospace;
@@ -18,7 +17,7 @@
         border: 5px solid rgb(67, 66, 66);
         background-color: rgb(106, 247, 247);
         border-radius: 10px;
-        display:contents;
+        display:block;
     }
     .riskCard{
         margin: 20px;
@@ -45,9 +44,11 @@
                 <option value="Medium">Medium</option>
                 <option value="High">High</option>
             </select>   
-            
+
         <input type="text" id="department" placeholder="Department">
         <button id="addRisk">Add Risk</button> 
+        </form>
+        <p> <button id = "allIncrease"> Increase Risk levels </button> </p>
 
         <div id="riskDashboard"></div>
 
