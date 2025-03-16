@@ -40,7 +40,15 @@
     <main>
         <form id = "inputForm" > 
         <input type="text" id = "risk" placeholder="Risk" required>
+            <select id="riskLevel">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>   
+            
+        <input type="text" id="department" placeholder="Department">
         <button id="addRisk">Add Risk</button> 
+
         <div id="riskDashboard"></div>
 
     <footer>
